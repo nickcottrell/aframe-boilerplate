@@ -1,4 +1,4 @@
-# WebVR scenes using A-Frame.
+# Graft VR
 
 Cloned from
 https://aframe.io/aframe-boilerplate/
