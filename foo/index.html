@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello VR</title>
+    <meta name="description" content="WebVR Scene using aframe.io">
+    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+	<a-assets>
+        <img id="mozvr" src="../img/nc.png">
+        <img id="shadow2" src="../img/radial-shadow-2.png">
+        <img id="ui1" src="../img/ui-1.png">
+        <img id="ui2" src="../img/ui-2.png">
+        <img id="ui3" src="../img/ui-3.png">
+        <img id="ui4" src="../img/ui-4.png">
+      </a-assets>
+
+
+      <a-sphere position="0 1.25 -1" radius=".25" color="#EF2D5E"></a-sphere>
+      <a-box position="-1 0.5 1" rotation="0 45 0" width=".25" height=".25" depth=".25"  color="#4CC3D9"></a-box>
+      <a-cylinder position="1 0.75 1" radius="0.1" height=".5" color="#FFC65D"></a-cylinder>
+      <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+
+
+      <a-entity position="0 1.8 4">
+        <a-camera id="camera">
+          <a-cursor color="#4CC3D9"></a-cursor>
+        </a-camera>
+      </a-entity>
+
+		<a-box id="orange-cube" position="0 3.5 -2" rotation="30 30 0" width="2" depth="2"
+             height="2" color="#F16745" roughness="0.8">
+        <a-event name="mouseenter" scale="3 1 1" color="#FFC65D"></a-event>
+        <a-event name="mouseenter" target="#shadow" scale="3 2 2"></a-event>
+        <a-event name="mouseleave" scale="1 1 1" color="#F16745"></a-event>
+        <a-event name="mouseleave" target="#shadow" scale="2 2 2"></a-event>
+      </a-box>
+
+
+
+      <a-curvedimage src="#mozvr" radius="5.7" theta-length="17" height=".36"
+                     opacity="0.8" rotation="0 290 0" position="0 2 0"></a-curvedimage>
+      <a-curvedimage src="#ui1" radius="5.7" theta-length="72" height="2.6"
+                     rotation="0 380 0" position="0 0.7 0" scale="0.6 0.6 0.6"></a-curvedimage>
+      <a-curvedimage src="#ui2" radius="5.7" theta-length="70" height="3.02"
+                     rotation="0 -100 0" scale="0.8 0.8 0.8"></a-curvedimage>
+
+      <a-image position="0 -5 0" src="#shadow2" rotation="-90 0 0" scale="6 6 6"></a-image>
+      <a-camera position="0 1.8 1.5"></a-camera>
+
+
+      <a-sky src="360-panorama-sample.jpg" rotation="0 -130 0"></a-sky>
+    </a-scene>
+  </body>
+</html>
