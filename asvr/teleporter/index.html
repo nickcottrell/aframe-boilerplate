@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Teleporter App</title>
+    <meta name="description" content="Teleporter for public spaces in AltspaceVR">
+	<script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+	<script src="https://cdn.rawgit.com/AltspaceVR/aframe-altspace-component/v0.2.1/dist/aframe-altspace-component.min.js"></script>
+	<script src="https://npmcdn.com/aframe-draw-component@1.4.0/dist/aframe-draw-component.js"></script>
+	<script src="https://npmcdn.com/aframe-textwrap-component@1.0.1/dist/aframe-textwrap-component.js"></script>
+	</head>
+  <body>
+    <a-scene altspace>
+	    <a-sky id="sky" radius="1.8" src="img/DiscGolf_360_sm.jpg"></a-sky>
+	
+	    <a-entity id="next" geometry="primitive: sphere" position="1 -1 -1" scale="0.2 0.2 0.2" draw="background: #222" textwrap="color:#fff; textAlign: top; text: next; font: 30px sans-serif; textBaseline: top;"></a-entity>
+
+	    <a-entity id="go" geometry="primitive: box" position="0 -1 -1" scale="0.4 0.4 0.4" draw="background: #222" textwrap="color:#fff; textAlign: top; text: go; font: 30px sans-serif; textBaseline: middle;"></a-entity>
+
+	    <a-entity camera look-controls>
+	      <a-cursor color="#37F0F7"></a-cursor>
+	    </a-entity>
+
+    </a-scene>
+<script>
+var images = [
+	'img/DiscGolf_360_sm.jpg',
+	'img/Exhibition_01_360_sm.jpg',
+	'img/JungleMaze_360_sm.jpg',
+	'img/Tavern_360_sm.jpg'
+];
+
+var links = [
+	'http://google.com?param=1',
+	'http://google.com?param=2',
+	'http://google.com?param=3',
+	'http://google.com?param=4'
+];
+
+var index = 0;
+next.addEventListener('click', function () {
+  index = (index + 1) % images.length % links.length;
+  sky.setAttribute('src', images[index])
+})
+
+go.addEventListener('click', function () {
+	location.href=links[index];
+})
+
+
+</script>
+
+  </body>
+</html>
