@@ -12,6 +12,8 @@
   <body>
     <a-scene altspace>
 	    <a-sky id="sky" radius="1.8" src="img/DiscGolf_360_sm.jpg"></a-sky>
+
+	    <a-entity id="prev" geometry="primitive: sphere" position="-1 -1 1" scale="0.2 0.2 0.2" draw="background: #222" textwrap="color:#fff; textAlign: top; text: prev; font: 30px sans-serif; textBaseline: top;"></a-entity>
 	
 	    <a-entity id="next" geometry="primitive: sphere" position="1 -1 -1" scale="0.2 0.2 0.2" draw="background: #222" textwrap="color:#fff; textAlign: top; text: next; font: 30px sans-serif; textBaseline: top;"></a-entity>
 
@@ -46,6 +48,12 @@ next.addEventListener('click', function () {
   index = (index + 1) % images.length % links.length;
   sky.setAttribute('src', images[index]) & linky.setAttribute('href', links[index]) ;
 })
+
+prev.addEventListener('click', function () {
+  index = (index - 1) % images.length % links.length;
+  sky.setAttribute('src', images[index]) & linky.setAttribute('href', links[index]) ;
+})
+
 
 go.addEventListener('click', function () {
 	document.getElementById('linky').click();
