@@ -22,6 +22,10 @@
 	    </a-entity>
 
     </a-scene>
+
+    <a id="linky" href="altspace://account.altvr.com/api/spaces/disc-golf">go</a>
+
+
 <script>
 var images = [
 	'img/DiscGolf_360_sm.jpg',
@@ -44,7 +48,8 @@ next.addEventListener('click', function () {
 })
 
 go.addEventListener('click', function () {
-	location.href=links[index];
+	//location.href=links[index];
+	document.getElementById('linky').click();
 })
 
 
