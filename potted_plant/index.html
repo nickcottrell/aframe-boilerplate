@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>plant obj</title>
     <meta name="description" content="This is a plant.">
-	<script src="https://sdk.altvr.com/libs/altspace.js/2.2.2/altspace.min.js"></script>
-    <script src="../dist/aframe-master.js"></script>
+    <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+    <script src="https://sdk.altvr.com/libs/altspace.js/2.2.2/altspace.min.js"></script>
   </head>
   <body>
     <a-scene altspace>
@@ -16,7 +16,7 @@
       	<a-camera position="4 2 3 0" rotation="-15 10 10"></a-camera>
       </a-entity>
 
-	  <a-entity position="0 0 0 0" rotation="" scale="" visible="" material="src:combined_plant_texture.jpg" obj-model="obj:potted_plant_040217.obj"></a-entity>
+	  <a-entity position="0 0 0 0" rotation="" scale="" visible="" material="src:url(combined_plant_texture.jpg)" obj-model="obj:url(potted_plant_040217.obj)"></a-entity>
      
       <a-light type="ambient" color="#ccc"></a-light>
       <a-light color="#ddf" distance="100" intensity="0.4" type="point"></a-light>
