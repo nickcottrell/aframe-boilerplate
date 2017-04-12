@@ -12,9 +12,16 @@
     <a-scene altspace>
       <a-assets>
       </a-assets>
-
-	  <a-entity position="0 0 -2 0" rotation="" scale="" visible="" material="src:url(UI-texture-FLAT.png)" obj-model="obj:url(test_041117-4.obj)"></a-entity>
+	  <!--MAKE SURE TO ACCOUNT FOR THE "position="0 0 -2 0" MIGHT NEED TO ADJUST THE ENCLOSURE-->
+	  <a-entity position="0 -1.5 -2 0" rotation="" scale="" visible="" material="src:url(AVATAR-texture-FLAT.png)" obj-model="obj:url(BASE-MODEL-TEST.obj)"></a-entity>
+	  <a-entity position="0 -1.5 -2 0" rotation="" scale="" visible="" material="src:url(UI-texture-FLAT.png); transparent:true;" obj-model="obj:url(BASE-UI-TEST.obj)"></a-entity>
      
+
+
+	  <a-sky id="sky" src="Exhibition_01_360_sm.jpg"></a-sky>
+	  <a-entity camera look-controls>
+	  	<a-cursor color="#37F0F7"></a-cursor>
+	  </a-entity>
       <a-light type="ambient" color="#ccc"></a-light>
       <a-light color="#ddf" distance="100" intensity="0.4" type="point"></a-light>
     </a-scene>
