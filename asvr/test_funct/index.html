@@ -17,11 +17,11 @@
 
 <!--HUD-->
 
-<!--
 <a-entity position="0 -1.5 -2 0" id="hud2" rotation="" scale="" visible="false" material="src:url(UI-texture-FLAT.png); transparent:true;" obj-model="obj:url(HUD-041217-1.obj)"></a-entity>
--->
+
 
 	  <a-entity position="0 -1.5 -2 0" id="hud1" rotation="" scale="" visible="true" material="src:url(UI-texture-FLAT.png); transparent:true;" obj-model="obj:url(HUD-041217-1.obj)"></a-entity>
+
 
 <!--AVATAR-->
 	  <a-entity position="0 -1.5 -2 0" id="avatar" rotation="" scale="" visible="true" material="src:url(AVATAR-texture-FLAT.png)" obj-model="obj:url(AVATAR-041217-1.obj)"></a-entity>
@@ -37,28 +37,25 @@
 	  <a-entity position="0 -1.5 -2 0" id="avatar_default_mode" rotation="" scale="" visible="true" material="src:url(UI-texture-FLAT.png); transparent:true;" obj-model="obj:url(AVATAR-base-default-041217-1.obj)"></a-entity>
 
 	<!--AVATAR EDIT MODE-->
-	<!--	
 	  <a-entity position="0 -1.5 -2 0" id="avatar_edit_mode" rotation="" scale="" visible="false" material="src:url(UI-texture-FLAT.png); transparent:true;" obj-model="obj:url(AVATAR-base-editmode-041217-1.obj)"></a-entity>
 	  <a-entity position="0 -1.5 -2 0" id="avatar_edit_mode_btn1" rotation="" scale="" visible="false" material="src:url(UI-texture-FLAT.png); transparent:true;" obj-model="obj:url(AVATAR-editmode-btn1-041217-1.obj)"></a-entity>
 	  <a-entity position="0 -1.5 -2 0" id="avatar_edit_mode_btn2" rotation="" scale="" visible="false" material="src:url(UI-texture-FLAT.png); transparent:true;" obj-model="obj:url(AVATAR-editmode-btn2-041217-1.obj)"></a-entity>
 	  <a-entity position="0 -1.5 -2 0" id="avatar_edit_mode_btn3" rotation="" scale="" visible="false" material="src:url(UI-texture-FLAT.png); transparent:true;" obj-model="obj:url(AVATAR-editmode-btn3-041217-1.obj)"></a-entity>
 	  <a-entity position="0 -1.5 -2 0" id="avatar_edit_mode_btn4" rotation="" scale="" visible="false" material="src:url(UI-texture-FLAT.png); transparent:true;" obj-model="obj:url(AVATAR-editmode-btn4-041217-1.obj)"></a-entity>
--->
+
 
 
 
 <!--AVATAR EDIT COLOR-->
-<!--
 	  <a-entity position="0 -1.5 -2 0" id="avatar_color_picker" rotation="" scale="" visible="false" material="src:url(UI-texture-FLAT.png); transparent:true;" obj-model="obj:url(AVATAR-picker-color-041217-1.obj)"></a-entity>
 	  <a-entity position="0 -1.5 -2 0" id="avatar_color_picker_closebtn" rotation="" scale="" visible="false" material="src:url(UI-texture-FLAT.png); transparent:true;" 
 obj-model="obj:url(AVATAR-picker-color-closebtn-041217-1.obj)"></a-entity>
--->
+
 
 <!--AVATAR EDIT FIELD-->
-<!--
 <a-entity position="0 -1.5 -2 0" id="avatar_field_picker" rotation="" scale="" visible="false" material="src:url(UI-texture-FLAT.png); transparent:true;" obj-model="obj:url(AVATAR-picker-field-041217-1.obj)"></a-entity>
 <a-entity position="0 -1.5 -2 0" id="avatar_field_picker_closebtn" rotation="" scale="" visible="false" material="src:url(UI-texture-FLAT.png); transparent:true;" obj-model="obj:url(AVATAR-picker-field-closebtn-041217-1.obj)"></a-entity>
--->
+
 
 
 
@@ -70,7 +67,86 @@ obj-model="obj:url(AVATAR-picker-color-closebtn-041217-1.obj)"></a-entity>
       <a-light color="#ddf" distance="100" intensity="0.4" type="point"></a-light>
     </a-scene>
 
+	<script>
 
+	hud1.addEventListener('click', function () {
+	  avatar.setAttribute('visible', 'false') 
+	& leftpanel.setAttribute('visible', 'false') 
+	& mainpanel.setAttribute('visible', 'false') 
+	& action_closebtn.setAttribute('visible', 'false') 
+	& avatar_default_mode.setAttribute('visible', 'false')
+	& hud2.setAttribute('visible', 'true');
+	})
+
+	action_closebtn.addEventListener('click', function () {
+	  avatar.setAttribute('visible', 'false') 
+	& leftpanel.setAttribute('visible', 'false') 
+	& mainpanel.setAttribute('visible', 'false') 
+	& action_closebtn.setAttribute('visible', 'false') 
+	& avatar_default_mode.setAttribute('visible', 'false')
+	& hud2.setAttribute('visible', 'true');
+	})
+
+	hud2.addEventListener('click', function () {
+	  avatar.setAttribute('visible', 'true') 
+	& leftpanel.setAttribute('visible', 'true') 
+	& mainpanel.setAttribute('visible', 'true') 
+	& action_closebtn.setAttribute('visible', 'true') 
+	& avatar_default_mode.setAttribute('visible', 'true')
+	& hud2.setAttribute('visible', 'false')
+	& hud1.setAttribute('visible', 'true');
+	})
+
+
+
+	avatar_default_mode.addEventListener('click', function () {
+	  avatar_default_mode.setAttribute('visible', 'false') 
+	& avatar_edit_mode.setAttribute('visible', 'true') 
+	& avatar_edit_mode_btn1.setAttribute('visible', 'true') 
+	& avatar_edit_mode_btn2.setAttribute('visible', 'true') 
+	& avatar_edit_mode_btn3.setAttribute('visible', 'true') 
+	& avatar_edit_mode_btn4.setAttribute('visible', 'true');
+	})
+	
+	avatar_edit_mode.addEventListener('click', function () {
+	  avatar_default_mode.setAttribute('visible', 'true') 
+	& avatar_edit_mode.setAttribute('visible', 'false') 
+	& avatar_edit_mode_btn1.setAttribute('visible', 'false') 
+	& avatar_edit_mode_btn2.setAttribute('visible', 'false') 
+	& avatar_edit_mode_btn3.setAttribute('visible', 'false') 
+	& avatar_edit_mode_btn4.setAttribute('visible', 'false');
+	})	
+
+	avatar_edit_mode_btn1.addEventListener('click', function () {
+	  avatar_color_picker.setAttribute('visible', 'true') 
+	& avatar_color_picker_closebtn.setAttribute('visible', 'true');
+	})
+	
+	avatar_color_picker_closebtn.addEventListener('click', function () {
+	  avatar_color_picker.setAttribute('visible', 'false') 
+	& avatar_color_picker_closebtn.setAttribute('visible', 'false');
+	})
+	
+	avatar_color_picker.addEventListener('click', function () {
+	  avatar_color_picker.setAttribute('visible', 'false') 
+	& avatar_color_picker_closebtn.setAttribute('visible', 'false');
+	})
+	
+	avatar_edit_mode_btn4.addEventListener('click', function () {
+	  avatar_field_picker.setAttribute('visible', 'true') 
+	& avatar_field_picker_closebtn.setAttribute('visible', 'true');
+	})
+	
+	avatar_field_picker_closebtn.addEventListener('click', function () {
+	  avatar_field_picker.setAttribute('visible', 'false') 
+	& avatar_field_picker_closebtn.setAttribute('visible', 'false');
+	})
+	
+	avatar_field_picker.addEventListener('click', function () {
+	  avatar_field_picker.setAttribute('visible', 'false') 
+	& avatar_field_picker_closebtn.setAttribute('visible', 'false');
+	})
+	</script>
 
 
   </body>
