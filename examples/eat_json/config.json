@@ -1,0 +1,22 @@
+{
+	"eat_this_sample": {
+		"name": "Sample Thing",
+		"attributes": {
+			"top": {
+				"name": "Top Thing",
+				"model": "cube.obj",
+				"texture": "wood.jpg"
+			},
+			"middle": {
+				"name": "Middle Thing",
+				"model": "cone.obj",
+				"texture": "tile.jpg"
+			},
+			"bottom": {
+				"name": "Bottom Thing",
+				"model": "sphere.obj",
+				"texture": "camo.jpg"
+			}
+		}
+	}
+}

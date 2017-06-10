@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>radial menu</title>
+    <meta name="description" content="this is a test">
+    <script src="js/aframe-master.js"></script>
+  </head>
+  <body>
+
+    <a-scene>
+      <a-assets>
+      </a-assets>
+
+      	<a-entity id="container" scale=".1 .1 .1" position="0 0 -1" rotation="-45 0 0">
+          <a-entity class="rad" material="src:url(img/01.jpg);" obj-model="obj:url(obj/sphere.obj)"></a-entity>
+		      <a-entity class="rad" material="src:url(img/02.jpg);" obj-model="obj:url(obj/sphere.obj)"></a-entity>
+          <a-entity class="rad" material="src:url(img/03.jpg);" obj-model="obj:url(obj/sphere.obj)"></a-entity>
+          <a-entity class="rad" material="src:url(img/04.jpg);" obj-model="obj:url(obj/sphere.obj)"></a-entity>
+          <a-entity class="rad" material="src:url(img/05.jpg);" obj-model="obj:url(obj/sphere.obj)"></a-entity>
+          <a-entity class="rad" material="src:url(img/06.jpg);" obj-model="obj:url(obj/sphere.obj)"></a-entity>
+          <a-entity class="rad" material="src:url(img/07.jpg);" obj-model="obj:url(obj/sphere.obj)"></a-entity>
+          <a-entity class="rad" material="src:url(img/08.jpg);" obj-model="obj:url(obj/sphere.obj)"></a-entity>
+          <a-entity class="rad" material="src:url(img/09.jpg);" obj-model="obj:url(obj/sphere.obj)"></a-entity>
+        </a-entity>
+ 
+	  <a-sky id="sky" src="img/bg.jpg" rotation="0 -150 0"></a-sky>
+	  <a-entity camera look-controls>
+	  	<a-cursor color="#fff"></a-cursor>
+	  </a-entity>
+      <a-light type="ambient" color="#ccc"></a-light>
+      <a-light color="#ddf" distance="100" intensity="0.4" type="point"></a-light>
+    </a-scene>
+    <script type="text/javascript" src="js/prototype.js"></script>
+
+
+    <script src="../dist/aframe-inspector.js"></script>
+
+ 
+  </body>
+</html>
