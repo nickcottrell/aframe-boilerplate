@@ -61,6 +61,10 @@ if (!isSafari) {
         <img id="ui4" src="img/ui-4.png">
       </a-assets>
 
+
+      <a-entity class="btn" geometry="primitive: sphere" material="color: gray" position="0 4 -2"></a-entity>
+
+
       <a-curvedimage src="#ui3" radius="5.7" theta-length="180" height="12"
                      rotation="0 90 0" scale="1.2 1.2 1.2"></a-curvedimage>
       <a-curvedimage src="#mozvr" radius="5.7" theta-length="17" height=".36"
@@ -74,7 +78,11 @@ if (!isSafari) {
 
       <a-image position="0 -5 0" src="#shadow2" rotation="-90 0 0" scale="6 6 6"></a-image>
       <a-sky color="#fff"></a-sky>
-      <a-camera position="0 1.8 1.5"></a-camera>
+      <a-entity position="0 1.8 1.5" camera look-controls>
+      <a-cursor color="#333"></a-cursor>
+    </a-entity>
     </a-scene>
+    <script type="text/javascript" src="js/funct.js"></script>
+
   </body>
 </html>
