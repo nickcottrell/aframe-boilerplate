@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>video-test</title>
+    <meta name="description" content="this is a test">
+    <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>	
+	<script>
+	//nothing
+	</script>
+	
+	
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <video id="video" src="vid/sample_sm.mp4"
+               autoplay loop crossorigin="anonymous"></video>
+      </a-assets>
+
+      <a-videosphere src="#video" rotation="0 -90 0"></a-videosphere>
+    </a-scene>
+
+
+
+  </body>
+</html>
+
+
+
