@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>video-test</title>
     <meta name="description" content="this is a test">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>	
 	<script>
 	//nothing
@@ -15,7 +16,7 @@
     <a-scene>
       <a-assets>
         <video id="video" src="vid/sample_sm.mp4"
-               autoplay loop crossorigin="anonymous"></video>
+               autoplay playsinline loop crossorigin="anonymous"></video>
       </a-assets>
 
       <a-videosphere src="#video" rotation="0 -90 0"></a-videosphere>
