@@ -1,7 +1,7 @@
 # Web VR Experiments
 This is a collection of projects that I developed using mozilla's A-Frame. Most of the functionality is powered by JavaScript. During my time at AltspaceVR, I spent time learning and developing in A-Frame because it was part of the SDK stack that allowed people to publish and display content directly in the AltspaceVR social VR network. These efforts helped play a role in some of the earliest User Generated Content in VR.
 
-**Browser Compatability Warning: A-frame will only run on certain browsers: https://aframe.io/docs/0.7.0/introduction/vr-headsets-and-webvr-browsers.html**
+**Compatability Warning: A-frame will only run on certain browsers: https://webvr.rocks/**
 
 ## Radial Menu
 Developed a 3D radial menu. The menu is dynamically generated based on the number of entity tags that exist inside of a wrapper class. Was looking for a good way to view a list of content in VR at the time and the radial menu seemed to be a good option. https://github.com/nickcottrell/vr/tree/master/examples/radial_menu
